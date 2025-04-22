@@ -6,6 +6,8 @@
     <title>MediConnect Benin - Télémédecine</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
@@ -66,6 +68,9 @@
         .pulse {
             animation: pulse 2s infinite;
         }
+        body {
+    padding-bottom: 60px; /* Ajuste selon la hauteur de ta nav */
+  }
     </style>
 </head>
 <body>
@@ -81,16 +86,20 @@
             
             <nav class="hidden md:flex space-x-8">
                 <a href="#accueil" class="nav-link text-gray-600 hover:text-blue-500 font-medium">Accueil</a>
-                <a href="#consultation" class="nav-link text-gray-600 hover:text-blue-500 font-medium">Consultation</a>
-                <a href="#dossiers" class="nav-link text-gray-600 hover:text-blue-500 font-medium">Dossiers</a>
-                <a href="#services" class="nav-link text-gray-600 hover:text-blue-500 font-medium">Services</a>
-                <a href="#apropos" class="nav-link text-gray-600 hover:text-blue-500 font-medium">À propos</a>
+                <a href="consultation_en_ligne.html" class="nav-link text-gray-600 hover:text-blue-500 font-medium">Consultation</a>
+                <a href="dossier_medical_du_patient.html" class="nav-link text-gray-600 hover:text-blue-500 font-medium">Dossiers</a>
+                <a href="conseil_médicaux.html" class="nav-link text-gray-600 hover:text-blue-500 font-medium">Services</a>
+                <a href="liste_médécin.html" class="nav-link text-gray-600 hover:text-blue-500 font-medium">Médécin</a>
+                <a href="liste_phamarcie.html" class="nav-link text-gray-600 hover:text-blue-500 font-medium">Phamarcie</a>
+                <a href="notation_des_médécins.html" class="nav-link text-gray-600 hover:text-blue-500 font-medium">Notation</a>
+                <a href="système_de_rapport_médicaux.html" class="nav-link text-gray-600 hover:text-blue-500 font-medium">Notification</a>
             </nav>
             
             <div class="flex items-center space-x-4">
-                <button class="hidden md:block bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full font-medium transition">
+                <a href="login_register.html" class="hidden md:inline-block bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full font-medium transition">
                     Connexion
-                </button>
+                </a>
+                
                 <button class="md:hidden text-gray-600">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
@@ -105,12 +114,7 @@
                 <h1 class="text-4xl md:text-5xl font-bold mb-4">Soins médicaux à distance, simple et sécurisé</h1>
                 <p class="text-lg mb-8 opacity-90">Consultez des médecins qualifiés depuis chez vous, gérez vos dossiers médicaux et recevez des rappels pour vos traitements.</p>
                 <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                    <button class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-full font-bold transition">
-                        Prendre un rendez-vous
-                    </button>
-                    <button class="border-2 border-white text-white hover:bg-white hover:bg-opacity-10 px-6 py-3 rounded-full font-bold transition">
-                        En savoir plus
-                    </button>
+                    
                 </div>
             </div>
             <div class="md:w-1/2 flex justify-center">
@@ -948,9 +952,12 @@
             <h2 class="text-3xl md:text-4xl font-bold mb-6">Prêt à essayer MediConnect ?</h2>
             <p class="text-xl mb-8 max-w-2xl mx-auto">Inscrivez-vous maintenant et bénéficiez de votre première consultation à moitié prix.</p>
             <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
-                <button class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition">
-                    <i class="fas fa-user-plus mr-2"></i> S'inscrire
-                </button>
+                <a href="login_register.html">
+                    <button class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-full font-bold text-lg transition">
+                        <i class="fas fa-user-plus mr-2"></i> S'inscrire
+                    </button>
+                </a>
+                
                 <button class="border-2 border-white text-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-full font-bold text-lg transition">
                     <i class="fas fa-question-circle mr-2"></i> Poser une question
                 </button>
@@ -959,7 +966,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-16 pb-8">
+    <footer class="hidden md:block bg-gray-900 text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
@@ -1042,12 +1049,7 @@
         </div>
     </footer>
 
-    <!-- Floating Action Button -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <button class="w-14 h-14 rounded-full gradient-bg text-white shadow-lg hover:shadow-xl transition flex items-center justify-center">
-            <i class="fas fa-comment-medical text-xl"></i>
-        </button>
-    </div>
+
 
     <!-- Script for interactive elements -->
     <script>
@@ -1128,5 +1130,38 @@
             }
         });
     </script>
+     <!-- À placer dans le <body> de chaque page HTML -->
+    <div id="navbar-mobile-placeholder"></div>
+<script>
+    fetch('navbar_mobile.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('navbar-mobile-placeholder').innerHTML = html;
 
+            // Si on veut afficher tous les éléments, on n'applique aucun filtrage :
+            // const showIcons = [...]; → supprimé ou ignoré
+
+            /*
+            // Ce bloc n'est plus nécessaire si on veut tout afficher :
+            const allIcons = [
+                'nav-accueil',
+                'nav-consultation',
+                'nav-dossiers',
+                'nav-services',
+                'nav-medecin',
+                'nav-pharmacie',
+                'nav-notation',
+                'nav-notification'
+            ];
+            allIcons.forEach(id => {
+                if (!showIcons.includes(id)) {
+                    const el = document.getElementById(id);
+                    if (el) el.style.display = 'none';
+                }
+            });
+            */
+        });
+</script>
+
+</body>
 </html>

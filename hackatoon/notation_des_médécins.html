@@ -6,6 +6,7 @@
     <title>MediConnect - Notation des Médecins | Feedback des Patients</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         .rating-stars {
             direction: rtl;
@@ -37,6 +38,9 @@
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        body {
+    padding-bottom: 60px; /* Ajuste selon la hauteur de ta nav */
+  }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -49,8 +53,14 @@
             </div>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="#" class="text-blue-600 font-medium">Accueil</a></li>
-                    <li><a href="#" class="text-gray-600 hover:text-blue-600">Médecins</a></li>
+                    <li><a href="index.html" class="text-blue-600 font-medium">Accueil</a></li>
+                    <li><a href="consultation_en_ligne.html" class="text-blue-600 font-medium">Consultation</a></li>
+                    <li><a href="dossier_medical_du_patient.html" class="text-blue-600 font-medium">Dossiers</a></li>
+                    <li><a href="conseil_médicaux.html" class="text-blue-600 font-medium">Services</a></li>
+                    <li><a href="liste_médécin.html" class="text-blue-600 font-medium">Médecin</a></li>
+                    <li><a href="liste_phamarcie.html" class="text-blue-600 font-medium">Pharmacie</a></li>
+                    <li><a href="notation_des_médécins.html" class="text-blue-600 font-medium">Notation</a></li>
+                    <li><a href="système_de_rapport_médicaux.html" class="text-blue-600 font-medium">Notification</a></li>
                 </ul>
             </nav>
             <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
@@ -58,6 +68,8 @@
             </button>
         </div>
     </header>
+
+    
 
     <!-- Hero Section -->
     <section class="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-16">
@@ -70,6 +82,54 @@
                     <button class="absolute right-3 top-3 text-blue-600">
                         <i class="fas fa-search"></i>
                     </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rating Criteria -->
+    <section class="bg-blue-50 rounded-xl p-8 mb-16">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">Comment noter votre médecin ?</h3>
+        <p class="text-gray-600 mb-6">Votre évaluation aide d'autres patients à choisir le bon professionnel de santé. Voici les critères à prendre en compte :</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex items-start">
+                <div class="bg-blue-100 p-3 rounded-full mr-4 text-blue-600">
+                    <i class="fas fa-user-md text-xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-2">Compétences médicales</h4>
+                    <p class="text-gray-600">Précision du diagnostic, pertinence du traitement, connaissances médicales.</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start">
+                <div class="bg-blue-100 p-3 rounded-full mr-4 text-blue-600">
+                    <i class="fas fa-comments text-xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-2">Communication</h4>
+                    <p class="text-gray-600">Clarté des explications, écoute, réponse aux questions.</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start">
+                <div class="bg-blue-100 p-3 rounded-full mr-4 text-blue-600">
+                    <i class="fas fa-clock text-xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-2">Ponctualité</h4>
+                    <p class="text-gray-600">Respect des horaires de rendez-vous, temps d'attente.</p>
+                </div>
+            </div>
+            
+            <div class="flex items-start">
+                <div class="bg-blue-100 p-3 rounded-full mr-4 text-blue-600">
+                    <i class="fas fa-heart text-xl"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-2">Relation patient</h4>
+                    <p class="text-gray-600">Empathie, respect, attitude bienveillante.</p>
                 </div>
             </div>
         </div>
@@ -187,53 +247,7 @@
         </section>
 
 
-        <!-- Rating Criteria -->
-        <section class="bg-blue-50 rounded-xl p-8 mb-16">
-            <h3 class="text-2xl font-bold text-gray-800 mb-6">Comment noter votre médecin ?</h3>
-            <p class="text-gray-600 mb-6">Votre évaluation aide d'autres patients à choisir le bon professionnel de santé. Voici les critères à prendre en compte :</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="flex items-start">
-                    <div class="bg-blue-100 p-3 rounded-full mr-4 text-blue-600">
-                        <i class="fas fa-user-md text-xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-800 mb-2">Compétences médicales</h4>
-                        <p class="text-gray-600">Précision du diagnostic, pertinence du traitement, connaissances médicales.</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start">
-                    <div class="bg-blue-100 p-3 rounded-full mr-4 text-blue-600">
-                        <i class="fas fa-comments text-xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-800 mb-2">Communication</h4>
-                        <p class="text-gray-600">Clarté des explications, écoute, réponse aux questions.</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start">
-                    <div class="bg-blue-100 p-3 rounded-full mr-4 text-blue-600">
-                        <i class="fas fa-clock text-xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-800 mb-2">Ponctualité</h4>
-                        <p class="text-gray-600">Respect des horaires de rendez-vous, temps d'attente.</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start">
-                    <div class="bg-blue-100 p-3 rounded-full mr-4 text-blue-600">
-                        <i class="fas fa-heart text-xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-800 mb-2">Relation patient</h4>
-                        <p class="text-gray-600">Empathie, respect, attitude bienveillante.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
     </main>
 
     <!-- Rating Modal -->
@@ -283,7 +297,7 @@
     </div>
 
      <!-- Footer -->
-     <footer class="bg-gray-900 text-white pt-16 pb-8">
+     <footer class="hidden md:block bg-gray-900 text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
@@ -451,5 +465,40 @@
             }
         });
     </script>
+
+<div id="navbar-mobile-placeholder"></div>
+<div id="navbar-mobile-placeholder"></div>
+<script>
+    fetch('navbar_mobile.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('navbar-mobile-placeholder').innerHTML = html;
+
+            // Si on veut afficher tous les éléments, on n'applique aucun filtrage :
+            // const showIcons = [...]; → supprimé ou ignoré
+
+            /*
+            // Ce bloc n'est plus nécessaire si on veut tout afficher :
+            const allIcons = [
+                'nav-accueil',
+                'nav-consultation',
+                'nav-dossiers',
+                'nav-services',
+                'nav-medecin',
+                'nav-pharmacie',
+                'nav-notation',
+                'nav-notification'
+            ];
+            allIcons.forEach(id => {
+                if (!showIcons.includes(id)) {
+                    const el = document.getElementById(id);
+                    if (el) el.style.display = 'none';
+                }
+            });
+            */
+        });
+</script>
+
+
 </body>
 </html>

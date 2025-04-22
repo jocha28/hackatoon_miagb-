@@ -6,6 +6,7 @@
     <title>MediConnect - Système de Rappels Médicaux</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         /* Custom CSS for animations and additional styling */
         @keyframes fadeIn {
@@ -34,6 +35,10 @@
         .toggle-checkbox:checked + .toggle-label {
             background-color: #93c5fd;
         }
+
+        body {
+    padding-bottom: 60px; /* Ajuste selon la hauteur de ta nav */
+  }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -42,21 +47,10 @@
         <header class="flex justify-between items-center mb-8 fade-in">
             <div>
                 <h1 class="text-3xl font-bold text-blue-800">MediConnect</h1>
-                <p class="text-gray-600">Votre système de rappels médicaux intelligent</p>
+                
             </div>
             <div class="flex items-center space-x-4">
-                <div class="relative">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <i class="fas fa-bell text-gray-400"></i>
-                    </div>
-                    <div class="absolute right-0 top-0 transform -translate-y-1/2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</div>
-                    <select class="appearance-none bg-white border border-gray-300 rounded-lg pl-10 pr-8 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <option>Notifications</option>
-                        <option>Rappel: Consultation demain</option>
-                        <option>Prendre médicament à 12h</option>
-                        <option>Nouveau message du Dr. Dupont</option>
-                    </select>
-                </div>
+                
                 <div class="flex items-center space-x-2">
                     <img src="https://ui-avatars.com/api/?name=Jean+Dupont&background=3b82f6&color=fff" alt="Profile" class="w-10 h-10 rounded-full">
                     <span class="font-medium">Jean Dupont</span>
@@ -374,5 +368,40 @@
             });
         });
     </script>
+
+<div id="navbar-mobile-placeholder"></div>
+<div id="navbar-mobile-placeholder"></div>
+<script>
+    fetch('navbar_mobile.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('navbar-mobile-placeholder').innerHTML = html;
+
+            // Si on veut afficher tous les éléments, on n'applique aucun filtrage :
+            // const showIcons = [...]; → supprimé ou ignoré
+
+            /*
+            // Ce bloc n'est plus nécessaire si on veut tout afficher :
+            const allIcons = [
+                'nav-accueil',
+                'nav-consultation',
+                'nav-dossiers',
+                'nav-services',
+                'nav-medecin',
+                'nav-pharmacie',
+                'nav-notation',
+                'nav-notification'
+            ];
+            allIcons.forEach(id => {
+                if (!showIcons.includes(id)) {
+                    const el = document.getElementById(id);
+                    if (el) el.style.display = 'none';
+                }
+            });
+            */
+        });
+</script>
+
+
 </body>
 </html>

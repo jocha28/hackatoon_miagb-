@@ -6,6 +6,7 @@
     <title>MediConnect - Consultation Médicale en Ligne</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         .gradient-bg {
             background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
@@ -44,6 +45,9 @@
         .payment-method:hover {
             border-color: #3b82f6;
         }
+        body {
+    padding-bottom: 60px; /* Ajuste selon la hauteur de ta nav */
+  }
     </style>
 </head>
 <body class="font-sans bg-gray-50">
@@ -58,8 +62,15 @@
                     </div>
                 </div>
                 <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
-                    <a href="#" class="text-blue-600 border-blue-500 px-3 py-2 text-sm font-medium border-b-2">Accueil</a>
-                    <a href="#" class="text-gray-500 hover:text-blue-600 px-3 py-2 text-sm font-medium">Médecins</a>
+                    <a href="index.html" class="text-blue-600 border-blue-500 px-3 py-2 text-sm font-medium border-b-2">Accueil</a>
+                    <a href="consultation_en_ligne.html" class="text-gray-600 hover:text-blue-500 hover:border-blue-500 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Consultation</a>
+                    <a href="dossier_medical_du_patient.html" class="text-gray-600 hover:text-blue-500 hover:border-blue-500 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Dossiers</a>
+                    <a href="conseil_médicaux.html" class="text-gray-600 hover:text-blue-500 hover:border-blue-500 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Services</a>
+                    <a href="liste_médécin.html" class="text-gray-600 hover:text-blue-500 hover:border-blue-500 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Médecin</a>
+                    <a href="liste_phamarcie.html" class="text-gray-600 hover:text-blue-500 hover:border-blue-500 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Pharmacie</a>
+                    <a href="notation_des_médécins.html" class="text-gray-600 hover:text-blue-500 hover:border-blue-500 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Notation</a>
+                    <a href="système_de_rapport_médicaux.html" class="text-gray-600 hover:text-blue-500 hover:border-blue-500 px-3 py-2 text-sm font-medium border-b-2 border-transparent">Notification</a>
+
                 </div>
                 <div class="flex items-center">
                     <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
@@ -80,14 +91,7 @@
                 <p class="mt-6 max-w-lg mx-auto text-xl">
                     Consultez un médecin certifié depuis chez vous, 7j/7, par vidéo ou chat. Paiement sécurisé et remboursable par l'assurance.
                 </p>
-                <div class="mt-10">
-                    <button class="bg-white text-blue-600 px-8 py-3 rounded-md text-lg font-semibold hover:bg-gray-100 mr-4">
-                        <i class="fas fa-video mr-2"></i>Prendre RDV
-                    </button>
-                    <button class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-white hover:text-blue-600">
-                        <i class="fas fa-comment-medical mr-2"></i>Chat instantané
-                    </button>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -274,70 +278,6 @@
         </div>
     </div>
 
-    <!-- Testimonials -->
-    <div class="bg-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-12">
-                Témoignages de patients
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/32.jpg" alt="Patient">
-                        <div>
-                            <h4 class="font-medium text-gray-900">Sophie L.</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic">
-                        "J'ai pu consulter un pédiatre en urgence pour mon fils à 22h, depuis notre maison. Le médecin était très compétent et rassurant."
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/men/54.jpg" alt="Patient">
-                        <div>
-                            <h4 class="font-medium text-gray-900">Pierre M.</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic">
-                        "Service impeccable. J'ai économisé 2h de transport pour un simple renouvellement d'ordonnance. Le paiement est simple et sécurisé."
-                    </p>
-                </div>
-                <div class="bg-gray-50 p-6 rounded-lg">
-                    <div class="flex items-center mb-4">
-                        <img class="w-12 h-12 rounded-full mr-4" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Patient">
-                        <div>
-                            <h4 class="font-medium text-gray-900">Élodie T.</h4>
-                            <div class="flex text-yellow-400">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 italic">
-                        "L'abonnement famille est parfait pour nous. Nous avons accès à plusieurs spécialistes sans avoir à prendre rendez-vous dans 3 mois."
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- CTA Section -->
     <div class="gradient-bg text-white py-16">
@@ -355,7 +295,7 @@
     </div>
 
      <!-- Footer -->
-     <footer class="bg-gray-900 text-white pt-16 pb-8">
+     <footer class="hidden md:block bg-gray-900 text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div>
@@ -438,38 +378,7 @@
         </div>
     </footer>
 
-    <!-- Chat Widget -->
-    <div class="fixed bottom-6 right-6">
-        <button id="chat-widget-button" class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg">
-            <i class="fas fa-comment-medical text-xl"></i>
-        </button>
-        <div id="chat-widget" class="hidden absolute bottom-20 right-0 w-80 bg-white rounded-lg shadow-xl border border-gray-200">
-            <div class="bg-blue-600 text-white p-3 rounded-t-lg flex justify-between items-center">
-                <h4 class="font-medium">Support médical</h4>
-                <button id="close-chat" class="text-white hover:text-gray-200">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="p-4 h-64 overflow-y-auto bg-gray-50">
-                <div class="text-center text-sm text-gray-500 mb-4">
-                    Un médecin est disponible pour discuter
-                </div>
-                <div class="flex mb-4">
-                    <div class="chat-bubble doctor-bubble p-3">
-                        Bonjour, comment puis-je vous aider aujourd'hui ?
-                    </div>
-                </div>
-            </div>
-            <div class="p-3 border-t border-gray-200">
-                <div class="flex">
-                    <input type="text" placeholder="Tapez votre message..." class="flex-1 border border-gray-300 rounded-l-md px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-500">
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-r-md">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <script>
         // Toggle chat widget
@@ -494,5 +403,41 @@
             });
         });
     </script>
+
+    <!-- À placer dans le <body> de chaque page HTML -->
+<div id="navbar-mobile-placeholder"></div>
+<div id="navbar-mobile-placeholder"></div>
+<script>
+    fetch('navbar_mobile.html')
+        .then(res => res.text())
+        .then(html => {
+            document.getElementById('navbar-mobile-placeholder').innerHTML = html;
+
+            // Si on veut afficher tous les éléments, on n'applique aucun filtrage :
+            // const showIcons = [...]; → supprimé ou ignoré
+
+            /*
+            // Ce bloc n'est plus nécessaire si on veut tout afficher :
+            const allIcons = [
+                'nav-accueil',
+                'nav-consultation',
+                'nav-dossiers',
+                'nav-services',
+                'nav-medecin',
+                'nav-pharmacie',
+                'nav-notation',
+                'nav-notification'
+            ];
+            allIcons.forEach(id => {
+                if (!showIcons.includes(id)) {
+                    const el = document.getElementById(id);
+                    if (el) el.style.display = 'none';
+                }
+            });
+            */
+        });
+</script>
+
+
 </body>
 </html>
